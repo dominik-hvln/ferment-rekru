@@ -1,0 +1,56 @@
+.eventRegister {
+  padding: 67px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq(md) {
+    padding: 24px;
+  }
+
+  &__content {
+    padding: 48px 34px 32px 36px;
+    background-color: rgba($white, .7);
+    backdrop-filter: blur(35px) brightness(120%);
+    max-width: 528px;
+
+    @include mq(md) {
+      padding: 41px 20px 54px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+
+    @include mq(md) {
+      font-size: 35px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-bottom: 22px;
+
+    @include mq(md) {
+      margin-bottom: 39px;
+    }
+  }
+
+  .eventHero__register {
+    margin-bottom: 0;
+    padding: 20px 34px 20px 51px;
+
+    @include mq(md) {
+      padding: 20px 22.5px 20px 34px;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.register {
+    $form-padding: 43px;
+
+    @include flex(center);
+
+    background: $black;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 85px;
+
+    &__backgroundImage {
+        @include absolute(0,0,0,0);
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before {
+            @include ps-el;
+            @include absolute(0,0,0,0);
+
+            background-color: rgba($black, .5);
+            backdrop-filter: blur(14px) brightness(100%);
+        }
+    }
+
+    &__content {
+        z-index: 1;
+    }
+
+    &__title {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 80px;
+
+        @include mq(md) {
+            font-size: 38px;
+        }
+    }
+
+    &__form {
+        height: 100%;
+    }
+
+    &__form,
+    &__eventDetails {
+        position: relative;
+        padding: $form-padding;
+        border-radius: $border-radius-lg;
+        background-color: $white;
+    }
+    
+    &__eventDetails {
+        padding: 32px;
+
+        &:first-of-type {
+            padding-bottom: 1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:nth-of-type(3) {
+            padding-top: 36px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &--separator {
+            position: relative;
+            padding: 0;
+            border-radius: 0;
+            height: 37px;
+            background: transparent;
+
+            span {
+                $element-w: 70px;
+
+                background-color: $white;
+                background-repeat: no-repeat;
+                display: block;
+                float: left;
+                height: 100%;
+                width: calc(100% - #{$element-w} * 2);
+                background-size: 70px;
+                
+                &:first-child,
+                &:last-child {
+                    width: $element-w;
+                    background-color: transparent;
+                }
+
+                &:first-child {
+                    background-image: radial-gradient(circle at left, transparent 25%, $white 25.5%);
+                }
+                
+                &:last-child {
+                    background-image: radial-gradient(circle at right, transparent 25%, $white 25.5%);
+                }
+            }
+
+            &::before {
+                @include ps-el;
+                @include absolute(50%, 20px, false, 20px);
+
+                width: calc(100% - 40px);
+                height: 1px;
+                border-top: 2px dashed $gray-200;
+                margin-top: -1px;
+            }
+        }
+    }
+
+    &__formWrapper {
+        width: 755px;
+        max-width: 100%;
+    }
+
+    &__message {
+        @include flex(center, flex-start, column);
+
+        height: 100%;
+        padding-bottom: 4rem;
+
+        > h2,
+        > p {
+            color: $white;
+            width: 75%;
+
+            @include mq(md) {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        > h2 {
+            @include mq(md) {
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+
+        > .btn {
+            @include mq(md) {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    .register {
+        &__backgroundImage {
+            top: $wp-admin-h;
+            bottom: -$wp-admin-h;
+        }
+    }
+}

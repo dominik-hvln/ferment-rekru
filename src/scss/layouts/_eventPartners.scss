@@ -1,0 +1,63 @@
+.eventPartners {
+  padding: 95px 0 100px;
+  background-color: $gray-100;
+
+  @include mq(md) {
+    padding-top: 40px;
+  }
+
+  &__title {
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 57px;
+    font-size: 32px;
+    line-height: 48px;
+
+    @include mq(md) {
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 100px;
+
+    @include mq(md) {
+      margin: 0 auto 40px ;
+    }
+
+    .splide {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    padding: 50px 35px;
+    background-color: $white;
+    flex: 1 1 31%;
+    border-radius: 10px;
+    width: 372px;
+    max-width: 372px;
+    text-align: center;
+
+    @include mq(md) {
+      width: 280px;
+      max-width: 280px;
+      padding: 40px 35px;
+      margin: 0 auto;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__itemImage {
+    height: 100px;
+    max-height: 100px;
+    object-position: center;
+    object-fit: contain;
+  }
+}

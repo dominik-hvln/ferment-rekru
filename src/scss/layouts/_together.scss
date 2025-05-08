@@ -1,0 +1,80 @@
+.together {
+    background-color: $black;
+    padding: 60px 0 120px;
+    display: flex;
+
+    &__box {
+        padding: 105px 32px 120px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        position: relative;
+
+        &:hover {
+            .icon {
+                right: 39px;
+            }
+        }
+
+        @include mq(md) {
+            padding: 105px 22px;
+        }
+
+        &--small {
+            height: 100%;
+            max-height: 325px;
+            padding: 164px 22px 120px;
+
+            @include mq(md) {
+                margin-top: 25px;
+                padding: 74px 22px 70px;
+                height: unset;
+            }
+
+            .together__boxTitle {
+                font-size: 28px;
+                width: 100%;
+
+                @include mq(md) {
+                    font-size: 32px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .icon {
+            position: absolute;
+            color: $white;
+            transform: rotate(-90deg);
+            font-size: 33px;
+            bottom: 29px;
+            right: 29px;
+            transition: all .2s;
+        }
+    }
+
+    &__boxTitle {
+        color: $white;
+        font-size: 30px;
+        line-height: 34px;
+        font-weight: 600;
+        width: 50%;
+
+        @include mq(md) {
+            width: 100%;
+        }
+    }
+
+    &__boxDesc {
+        color: $white;
+        font-size: 16px;
+        line-height: 25px;
+        width: 50%;
+        margin-bottom: 0;
+
+        @include mq(md) {
+            width: 100%;
+        }
+    }
+}

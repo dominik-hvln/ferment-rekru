@@ -1,0 +1,118 @@
+.eventGallery {
+    background-color: $black;
+    padding: 100px 0 60px;
+    color: $white;
+
+    @include mq(md) {
+        padding: 50px 0 70px;
+    }
+
+    &__preTitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 32px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        margin-bottom: 63px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item {
+        width: 234px;
+        height: 234px;
+        flex: 1 1 19%;
+
+        @include mq(md) {
+            flex: 1 1 48.5%;
+            width: 186px;
+            height: 186px;
+        }
+
+        &:first-child {
+            width: 475px;
+            flex: 1 1 39.5%;
+
+            @include mq(md) {
+                width: unset;
+                flex: 1 1 48.5%;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 717px;
+            flex: 1 1 59.5%;
+
+            @include mq(md) {
+                width: unset;
+                flex: 1 1 48.5%;
+            }
+        }
+
+        &:nth-child(3) {
+            @include mq(md) {
+                width: 100%;
+                height: 250px;
+                flex: 1 1 100%;
+            }
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+            height: 475px;
+
+            @include mq(md) {
+                height: 186px;
+            }
+        }
+
+        &--all {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: $white;
+            padding-left: 15px;
+
+            &:hover {
+                color: $white;
+
+                .icon {
+                    right: 10px;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                transform: rotate(-90deg);
+                font-size: 33px;
+                transition: all .3s;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__all {
+        font-size: 28px;
+        line-height: 28px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        width: 50%;
+    }
+}
