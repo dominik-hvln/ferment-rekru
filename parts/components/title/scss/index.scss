@@ -1,0 +1,120 @@
+.title {
+    &-main {
+        font-size: 56px;
+        line-height: 67px;
+        font-weight: 900;
+        position: relative;
+        padding-bottom: 40px;
+
+        @include mq(lg) {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &::after {
+            content: '';
+            background: $primary;
+            height: 6px;
+            width: 145px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include mq(lg) {
+                display: none;
+            }
+        }
+    }
+
+    &-subtitle {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+
+        @include mq(lg) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &-cta {
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include mq(lg) {
+            font-size: 18px;
+            padding: 9px 17px;
+        }
+    }
+
+    &-sm {
+        height: auto;
+
+        .title {
+            &-main {
+                font-size: 32px;
+                line-height: 39px;
+                padding: 0;
+                margin-top: 50px;
+
+                &::after {
+                    display: none;
+                    height: 4px;
+
+                    @include mq(lg) {
+                        height: 3px;
+                    }
+                }
+
+                @include mq(lg) {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+
+            &-subtitle {
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 400;
+
+                @include mq(lg) {
+                    font-size: 16px;
+                    line-height: 19px;
+                    display: block;
+                }
+            }
+
+            &-cta {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-force-separator {
+        .title {
+            &-main {
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                &::after {
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    &-center {
+        text-align: center;
+
+        .title {
+            &-main {
+                &::after {
+                    transform: translateX(-50%);
+                    left: 50%;
+                }
+            }
+        }
+    }
+}

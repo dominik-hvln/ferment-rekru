@@ -1,0 +1,31 @@
+.was-validated {
+  .form {
+    &-control {
+      &:invalid {
+        border-color: $gray-100;
+        background-size: 10px;
+
+        ~ .invalid-feedback {
+          @include absolute($bottom: 0, $left: 43px);
+
+          padding-left: 20px;
+
+          @include mq(md) {
+            color: $white;
+            left: 0;
+          }
+
+          &::before {
+            @include ps-el;
+            @include absolute($top: 50%, $left: 0);
+
+            height: 10px;
+            width: 10px;
+            margin-top: -5px;
+            background-image: $form-feedback-icon-invalid;
+          }
+        }
+      }
+    }
+  }
+}

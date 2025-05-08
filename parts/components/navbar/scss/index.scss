@@ -1,0 +1,28 @@
+.navbar {
+    background: $white;
+
+    &-nav {
+        .menu {
+            &-item {
+                margin-right: 3rem;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    #wpadminbar {
+        @include mq(wp) {
+            position: fixed;
+            top: 0;
+        }
+    }
+
+    .navbar {
+        top: $wp-admin-h;
+        
+        @include mq(wp) {
+            top: $wp-admin-mobile-h;
+        }
+    }
+}
