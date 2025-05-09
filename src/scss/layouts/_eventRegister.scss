@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
 
   @include mq(md) {
-    padding: 24px;
+    padding: 22px 13px;
   }
 
   &__content {
@@ -15,7 +15,7 @@
     max-width: 528px;
 
     @include mq(md) {
-      padding: 41px 20px 54px;
+      padding: 35px 20px 35px;
     }
   }
 
@@ -27,8 +27,8 @@
     margin-bottom: 20px;
 
     @include mq(md) {
-      font-size: 35px;
-      line-height: 38px;
+      font-size: 26px;
+      line-height: 32px;
       margin-bottom: 16px;
     }
   }
@@ -50,7 +50,7 @@
     padding: 20px 34px 20px 51px;
 
     @include mq(md) {
-      padding: 20px 22.5px 20px 34px;
+      padding: 20px 16px;
     }
   }
 }

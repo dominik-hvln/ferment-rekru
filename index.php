@@ -283,7 +283,7 @@ $day = [
                                                 <li class="splide__slide">
                                                     <div class="eventProgram__item">
                                                         <?php if ($item['program_itemDesc']) { ?>
-                                                            <span class="icon icon-plus" data-bs-toggle="modal" data-bs-target="#programModal<?php echo $i; ?>"></span>
+                                                            <span class="icon icon-plus" data-bs-toggle="modal" data-bs-target="#programModal2<?php echo $i; ?>"></span>
                                                         <?php } ?>
                                                         <p class="eventProgram__itemTime"><?php echo $item['program_itemStart']; ?></p>
                                                         <p class="eventProgram__itemTitle"><?php echo $item['program_itemTitle']; ?></p>
@@ -305,7 +305,7 @@ $day = [
                         </div>
                         <?php $i = 0; foreach ($day['program_dayItems2'] as $item) : ?>
                             <!-- Modal -->
-                            <div class="modal fade" id="programModal<?php echo $i; ?>" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade" id="programModal2<?php echo $i; ?>" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">

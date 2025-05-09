@@ -66,7 +66,6 @@ import Splide from '@splidejs/splide';
 				breakpoints: {
 					600: {
 						perPage: 1,
-						autoWidth: true,
 					}
 				}
 			} ).mount();
